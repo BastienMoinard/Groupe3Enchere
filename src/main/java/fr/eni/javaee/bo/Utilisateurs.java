@@ -1,6 +1,7 @@
 package fr.eni.javaee.bo;
 
 public class Utilisateurs {
+	private String no_utilisateur;
 	private String pseudo;
 	private String prenom;
 	private String nom;
@@ -12,6 +13,33 @@ public class Utilisateurs {
 	private String mdp;
 	private int credit;
 	private boolean administrateur = false;
+	
+	
+	
+
+	public Utilisateurs(String pseudo, String prenom, String nom, String email, String telephone, String rue,
+			String codePostale, String ville, String mdp, int credit, boolean administrateur) {
+		super();
+		this.pseudo = pseudo;
+		this.prenom = prenom;
+		this.nom = nom;
+		this.email = email;
+		this.telephone = telephone;
+		this.rue = rue;
+		this.codePostale = codePostale;
+		this.ville = ville;
+		this.mdp = mdp;
+		this.credit = credit;
+		this.administrateur = administrateur;
+	}
+	
+	public String getNo_utilisateur() {
+		return no_utilisateur;
+	}
+	
+	public void setNo_utilisateur(String no_utilisateur) {
+		this.no_utilisateur = no_utilisateur;
+	}
 	public String getPseudo() {
 		return pseudo;
 	}

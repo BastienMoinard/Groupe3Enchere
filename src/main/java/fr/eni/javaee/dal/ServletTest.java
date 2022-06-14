@@ -26,7 +26,6 @@ public class ServletTest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out = response.getWriter(); 
-		out.print("bonjour");
 		try {
 			Context context = new InitialContext();
 			DataSource datasource = (DataSource) context.lookup("java:comp/env/jdbc/pool_cnx");
@@ -46,5 +45,6 @@ public class ServletTest extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
+	
+	
 }
