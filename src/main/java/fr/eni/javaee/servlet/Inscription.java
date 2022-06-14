@@ -14,7 +14,6 @@ import fr.eni.javaee.bo.Utilisateurs;
 /**
  * Servlet implementation class ServletInscription
  */
-@WebServlet("/inscription")
 public class Inscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

@@ -21,4 +21,15 @@
     <url-pattern>/ServletTest</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+    <description></description>
+    <display-name>Inscription</display-name>
+    <servlet-name>Inscription</servlet-name>
+    <servlet-class>fr.eni.javaee.servlet.Inscription</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Inscription</servlet-name>
+    <url-pattern>/Inscription</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
