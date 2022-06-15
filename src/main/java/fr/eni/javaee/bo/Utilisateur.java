@@ -1,6 +1,6 @@
 package fr.eni.javaee.bo;
 
-public class Utilisateurs {
+public class Utilisateur {
 	private String no_utilisateur;
 	private String pseudo;
 	private String prenom;
@@ -17,7 +17,7 @@ public class Utilisateurs {
 	
 	
 
-	public Utilisateurs(String pseudo, String prenom, String nom, String email, String telephone, String rue,
+	public Utilisateur(String pseudo, String prenom, String nom, String email, String telephone, String rue,
 			String codePostale, String ville, String mdp, int credit, boolean administrateur) {
 		super();
 		this.pseudo = pseudo;

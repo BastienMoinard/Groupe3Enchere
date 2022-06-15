@@ -9,11 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import fr.eni.javaee.bo.Utilisateurs;
+import fr.eni.javaee.bll.UtilisateurManager;
+import fr.eni.javaee.bo.Utilisateur;
 
 /**
  * Servlet implementation class ServletInscription
  */
+@WebServlet("/inscription")
 public class Inscription extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -48,7 +50,9 @@ public class Inscription extends HttpServlet {
 //		request.setAttribute("mdp", mdp);
 //		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/teste.jsp");
 //		rd.forward(request, response);
-//		Utilisateurs utilisateur = new Utilisateurs(pseudo, prenom, nom, email, telephone, rue, codePostale, ville, mdp, credit, false);
+		Utilisateur utilisateur = new Utilisateur(pseudo, prenom, nom, email, telephone, rue, codePostale, ville, mdp, credit, false);
+		UtilisateurManager utilisateurManager = new UtilisateurManager();
+		utilisateurManager.ajouterUtilisateur(utilisateur);
 		
 	}
 

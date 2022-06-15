@@ -1,13 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Formulaire</title>
-    </head>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet">
+<title>Formulaire</title>
+</head>
 
     <body>
         <main>
@@ -27,7 +26,7 @@
             </script>
             <div class="mon_formulaire">
                 <!-- Début du formulaire-->
-                <form method="POST" action="/inscription">
+                <form method="POST" action="<%=request.getContextPath()%>/inscription">
                     <div>
                         <fieldset>
                             <!-- Titre du formulaire -->
@@ -73,7 +72,7 @@
                                     <label for="email">Votre Email : </label>
                                 </div>
                                 <div class="champ">
-                                    <input class="form_saisie" type="email" name="email"
+                                    <input class="form_saisie" type="text" name="email"
                                         placeholder="Votre Email" /><br>
                                 </div>
                             </div>

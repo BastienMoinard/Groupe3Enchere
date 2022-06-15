@@ -2,15 +2,16 @@ package fr.eni.javaee.dal;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import fr.eni.javaee.bo.Utilisateurs;
+import fr.eni.javaee.bo.Utilisateur;
 
-public class UtilisateurDAOjdbc implements UtilisateursDAO {
-	private static final String INSERT="INSERT INTO UTILISATEUR(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mots_de_passe, credit, administrateur) VALUES(?,?);";
+public class UtilisateurDAOjdbc implements UtilisateurDAO {
+	private static final String INSERT="INSERT INTO UTILISATEURS(pseudo, nom, prenom, email, telephone, rue, code_postal, ville, mot_de_passe, credit, administrateur) VALUES(?,?,?,?,?,?,?,?,?,?,?);";
 
 	@Override
-	public void insert(Utilisateurs utilisateur) {
+	public void insert(Utilisateur utilisateur) {
 		// TODO Auto-generated method stub
 		try {
 			Connection cnx = ConnectionProvider.getConnection();
@@ -27,6 +28,13 @@ public class UtilisateurDAOjdbc implements UtilisateursDAO {
 			pstmt.setInt(10, utilisateur.getCredit());
 			pstmt.setBoolean(11, false);
 			pstmt.executeUpdate();
+			ResultSet rs = pstmt.getGeneratedKeys();
+			if(rs.next())
+			{
+				utilisateur.setNo_utilisateur(rs.getString(1));
+			}
+			rs.close();
+			pstmt.close();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
