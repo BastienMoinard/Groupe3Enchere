@@ -141,7 +141,7 @@ Partie formulaire
 }
 
 .btn {
-    display: flex;
+   	text-align: center;
     justify-content: center;
 }
 

@@ -53,6 +53,8 @@ public class Inscription extends HttpServlet {
 		Utilisateur utilisateur = new Utilisateur(pseudo, prenom, nom, email, telephone, rue, codePostale, ville, mdp, credit, false);
 		UtilisateurManager utilisateurManager = new UtilisateurManager();
 		utilisateurManager.ajouterUtilisateur(utilisateur);
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/FormulaireConnexion.jsp");
+		rd.forward(request, response);
 		
 	}
 

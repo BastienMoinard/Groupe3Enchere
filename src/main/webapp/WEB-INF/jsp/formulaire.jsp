@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet">
+<link href="<%=request.getContextPath() %>/style.css" rel="stylesheet">
 <title>Formulaire</title>
 </head>
 
@@ -134,7 +134,7 @@
                                     <label for="password">Répéter le mot de passe : </label>
                                 </div>
                                 <div class="champ">
-                                    <input class="form_saisie" type="confirmation" name="répéter mot de passe"
+                                    <input class="form_saisie" type="password" name="répéter mot de passe"
                                         placeholder="Répéter le mot mot de passe" /><br>
                                 </div>
                             </div>

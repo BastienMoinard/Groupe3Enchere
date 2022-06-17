@@ -11,10 +11,10 @@ public class UtilisateurManager {
 		this.utilisateurDAO = DAOFactory.getUtilisateurDAO();
 	}
 	
-	public Utilisateur ajouterUtilisateur(Utilisateur utilisateur) {
+	public void ajouterUtilisateur(Utilisateur utilisateur) {
 		
 		this.utilisateurDAO.insert(utilisateur);
-		return utilisateur;
+//		return utilisateur;
 		
 	}
 	public Boolean checkMotDePasse(String motdepasse, String email) {

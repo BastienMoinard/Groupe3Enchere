@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/style.css">
 <title>Formulaire De Connexion</title>
     </head>
 
@@ -63,11 +63,13 @@
                                 <a href="#">Mot de passe oublié</a>
                             </div>
                         </div>
-                        <div id="compte">
-                            <input class="btn2" type="submit" value="Créer un compte" />
-                        </div>
-                    </fieldset>
                 </form>
+                <form action="<%=request.getContextPath() %>/FormulaireInscription">
+                  <div id="compte">
+                      <input class="btn2" type="submit"  value="Créer un compte" />
+                  </div>
+                </form>
+              </fieldset>
             </div>
         </main>
     </body>
