@@ -17,4 +17,19 @@ public class UtilisateurManager {
 		return utilisateur;
 		
 	}
+	public Boolean checkMotDePasse(String motdepasse, String email) {
+        //Récupérer le mot de passe enregistrer dans la table utilisateur
+        Utilisateur utilisateur = returnUtilisateur(email);
+        String utilisateurMdp = utilisateur.getMdp();
+            if(utilisateurMdp.equals(motdepasse)) {
+                return true;
+            }else {
+                return false;
+            }
+    }
+	public Utilisateur returnUtilisateur(String email) {
+        //apeler la methode findByEmail sur la class dao
+                Utilisateur utilisateur = this.utilisateurDAO.findByEmail(email);
+                return utilisateur;
+    }
 }

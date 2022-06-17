@@ -15,7 +15,22 @@ public class Utilisateur {
 	private boolean administrateur = false;
 	
 	
-	
+	public Utilisateur(String no_utilisateur, String pseudo, String prenom, String nom, String email, String telephone,
+            String rue, String codePostale, String ville, String mdp, int credit, boolean administrateur) {
+        super();
+        this.no_utilisateur = no_utilisateur;
+        this.pseudo = pseudo;
+        this.prenom = prenom;
+        this.nom = nom;
+        this.email = email;
+        this.telephone = telephone;
+        this.rue = rue;
+        this.codePostale = codePostale;
+        this.ville = ville;
+        this.mdp = mdp;
+        this.credit = credit;
+        this.administrateur = administrateur;
+	}
 
 	public Utilisateur(String pseudo, String prenom, String nom, String email, String telephone, String rue,
 			String codePostale, String ville, String mdp, int credit, boolean administrateur) {
